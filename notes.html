@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="C:\Users\Venka\Downloads\m2H7G6A0b1A0K9m2.png" type="image/icon type">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+line-height: 1.6;
+margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+}
+body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+
+.header {
+    background-color: #3440b9;
+color: #fff;
+padding: 10px 0;
+text-align: center;
+position: relative;
+}
+
+.header .logo {
+position: absolute;
+top: 10px;
+left: 10px;
+}
+
+.header .logo img {
+height: 50px;
+width: auto;
+}
+
+nav {
+background: #444;
+color: #fff;
+padding: 10px 0;
+text-align: center;
+display: inline;
+}
+
+nav ul {
+list-style: none;
+padding: 0;
+}
+
+nav ul li {
+display: inline;
+margin: 0 10px;
+}
+
+nav ul li a {
+color: #a91414;
+text-decoration: none;
+}
+
+main {
+padding: 20px;
+background: #fff;
+margin: 20px auto;
+width: 100%;
+max-width: 900px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+color: #333;
+}
+
+pre {
+background: #eee;
+padding: 10px;
+border-left: 3px solid #333;
+overflow-x: auto;
+}
+
+code {
+font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+background: #333;
+color: #fff;
+text-align: center;
+padding: 10px 0;
+position: fixed;
+width: 100%;
+bottom: 0;
+}
+body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+
+</style>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="C:\Users\Venka\Downloads\m2H7G6A0b1A0K9m2.png" alt="Logo">
+        </div>
+        <h1>C Programming Notes</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Introduction to C Programming</h2>
+        <p>C is a powerful general-purpose programming language. It is fast, portable, and available on all platforms.</p>
+
+        <h2>Basic Syntax</h2>
+        <p>The syntax of C programming is the set of rules that define the combinations of symbols that are considered to be correctly structured programs in that language.</p>
+        <pre>
+            <code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, World!");
+    return 0;
+}
+            </code>
+        </pre>
+
+        <h2>Data Types</h2>
+        <p>Data types in C refer to an extensive system used for declaring variables or functions of different types.</p>
+        <h3>Primary Data Types</h3>
+        <ul>
+            <li><strong>int</strong>: Used to store integers. Example: <code>int a = 10;</code></li>
+            <li><strong>float</strong>: Used to store floating-point numbers. Example: <code>float b = 3.14;</code></li>
+            <li><strong>double</strong>: Used to store double-precision floating-point numbers. Example: <code>double c = 3.14159;</code></li>
+            <li><strong>char</strong>: Used to store single characters. Example: <code>char d = 'A';</code></li>
+        </ul>
+
+        <h3>Derived Data Types</h3>
+        <ul>
+            <li><strong>Arrays</strong>: Collection of elements of the same type. Example: <code>int arr[5] = {1, 2, 3, 4, 5};</code></li>
+            <li><strong>Pointers</strong>: Variables that store the address of another variable. Example: <code>int *ptr = &a;</code></li>
+            <li><strong>Structures</strong>: Custom data types that group variables of different types. Example:
+                <pre><code>
+struct Person {
+    char name[50];
+    int age;
+    float salary;
+};</code></pre>
+            </li>
+        </ul>
+
+        <h3>Enumeration Data Type</h3>
+        <p><strong>enum</strong>: Used to define a variable that can hold a set of predefined constants. Example:
+            <pre><code>
+enum Day {
+    Sunday,
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday
+};
+enum Day today = Monday;</code></pre>
+        </p>
+
+        <h3>Void Data Type</h3>
+        <p><strong>void</strong>: Represents the absence of type. Commonly used in functions to indicate that they do not return a value. Example:
+            <pre><code>
+void myFunction() {
+    // function code
+}</code></pre>
+        </p>
+        <table border="2">
+            <tr>
+                <th>Data Type</th>
+                <th>Size</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td align="center"> int</td>
+                <td align="center">2 or 4 bytes</td>
+                <td>Stores whole numbers without decimals</td>
+                <td align="center">1</td>
+            </tr>
+            <tr>
+                <td align="center"> float</td>
+                <td align="center">4 bytes</td>
+                <td>Stores fractional numbers containing one or more decimals. Sufficient for storing 6-7 decimal digits.</td>
+                <td align="center">1.99</td>
+            </tr>
+            <tr>
+                <td align="center">double</td>
+                <td align="center">8 bytes</td>
+                <td>Stores fractional numbers containing one or more decimals. Sufficient for storing 15 decimal digits.</td>
+                <td align="center">1.99</td>
+            </tr>
+            <tr>
+                <td align="center">char</td>
+                <td align="center">1 byte</td>
+                <td>Stores a single character/letter/number or ASCII values</td>
+                <td align="center">'A'</td>
+            </tr>
+        </table>
+
+        <h1>Control Structures in C Programming</h1>
+        <p>C programming language provides several control structures to manage the flow of execution. Here is a brief overview:</p>
+    
+        <h2>1. Conditional Statements</h2>
+        <ul>
+            <li><strong><code>if</code></strong> - Executes a block of code if its condition is true.</li>
+            <li><strong><code>if-else</code></strong> - Executes one block of code if the condition is true, and another if it is false.</li>
+            <li><strong><code>switch</code></strong> - Selects one of many blocks of code to execute based on the value of an expression.</li>
+        </ul>
+    
+        <h2>2. Loops</h2>
+        <ul>
+            <li><strong><code>for</code></strong> - Repeats a block of code a specified number of times.</li>
+            <li><strong><code>while</code></strong> - Repeats a block of code as long as a condition is true.</li>
+            <li><strong><code>do-while</code></strong> - Similar to <code>while</code>, but guarantees that the block of code is executed at least once.</li>
+        </ul>
+    
+        <h2>3. Jump Statements</h2>
+        <ul>
+            <li><strong><code>break</code></strong> - Exits from the innermost loop or switch statement.</li>
+            <li><strong><code>continue</code></strong> - Skips the remaining code in the current iteration of a loop and proceeds to the next iteration.</li>
+            <li><strong><code>return</code></strong> - Exits from a function and optionally returns a value.</li>
+        </ul>
+    
+        <p>These control structures are fundamental for creating efficient and effective C programs.</p>
+
+        <h1>Functions in C Programming</h1>
+        <p>Functions are a core concept in C programming, used to modularize and reuse code. Here's a brief overview:</p>
+    
+        <h2>1. Definition</h2>
+        <p>A function in C is a block of code designed to perform a specific task. It is defined once and can be called multiple times from different parts of a program.</p>
+    
+        <h2>2. Syntax</h2>
+        <p>The syntax for defining a function in C is:</p>
+        <pre><code>
+    return_type function_name(parameters) {
+        // body of the function
+        return value; // optional, depending on return_type
+    }
+        </code></pre>
+    
+        <h2>3. Components</h2>
+        <ul>
+            <li><strong><code>return_type</code></strong> - Specifies the type of value the function returns. Use <code>void</code> if no value is returned.</li>
+            <li><strong><code>function_name</code></strong> - The name used to call the function.</li>
+            <li><strong><code>parameters</code></strong> - A list of variables passed to the function. Can be empty if no parameters are needed.</li>
+            <li><strong><code>body</code></strong> - The block of code that performs the function's task.</li>
+            <li><strong><code>return</code></strong> - A statement that returns a value to the caller. Not used if the return type is <code>void</code>.</li>
+        </ul>
+    
+        <h2>4. Example</h2>
+        <p>Here's a simple example of a function that adds two integers:</p>
+        <pre><code>
+    #include &lt;stdio.h&gt;
+    
+    int add(int a, int b) {
+        return a + b;
+    }
+    
+    int main() {
+        int result = add(5, 3);
+        printf("Sum: %d\n", result);
+        return 0;
+    }
+        </code></pre>
+    
+        <p>In this example, the <code>add</code> function takes two integers as parameters, adds them, and returns the result. The <code>main</code> function calls <code>add</code> and prints the result.</p>
+        <p>Functions in C are defined as a block of statements that perform a specific task.</p>
+    </main>
+   <!---- <footer>
+        <p>&copy; 2024 C Programming Notes. All rights reserved.</p>
+    </footer>-->
+</body>
+</html>
